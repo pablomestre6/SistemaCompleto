@@ -1,6 +1,6 @@
 # SistemaCompleto
 
-Olá no tutorial de hoje iremos pegar algo um pouco mais avançado mostramos como funcionar 
+Olá no tutorial de hoje iremos pegar algo um pouco mais avançado, mostraremos como funcionar 
 a contrução de um sistema MVC utilizando todos os conceitos de Boas Práticas de desenvolvimento 
 modelagem de camadas vizando a responsividade e qualidade no sistema sem preça de entregar algo
 rápido. Mais uma solução que aborde conceitos para facilitar a manutenção do Software ou o 
