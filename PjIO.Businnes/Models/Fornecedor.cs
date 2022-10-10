@@ -12,6 +12,8 @@ namespace PjIO.Businnes.Models
 
         public string Documentos { get; set; }
 
+        public string CNPJ { get; set; }
+
         public TipodeFornecedor TipodeFornecedor { get; set; }
 
         public Endereco Endereco { get; set; }

@@ -11,8 +11,8 @@ namespace PjIO.Data.Context
     public class PjDevsCondext : DbContext
     {
         public PjDevsCondext(DbContextOptions options) : base(options)
-        {
-
+        { 
+        
         }
 
         public DbSet<Endereco> Enderecos { get; set; }
@@ -21,6 +21,16 @@ namespace PjIO.Data.Context
 
         public DbSet<Produto> Produtos { get; set; }
 
-       
+
+       protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(PjDevsCondext).Assembly);
+
+            foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
+
+            base.OnModelCreating(modelBuilder);
+        }  
     }
 }
